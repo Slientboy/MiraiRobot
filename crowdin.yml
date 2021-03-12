@@ -1,0 +1,4 @@
+commit_message: "[skip ci] Update Translations"
+files:
+  - source: locales/en.yml
+    translation: /**/locales/%locale_with_underscore%.yml
