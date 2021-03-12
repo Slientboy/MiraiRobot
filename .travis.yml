@@ -1,0 +1,32 @@
+os: linux
+dist: bionic
+language: python
+
+# Latest & lighest code
+git:
+  depth: 1
+  quiet: true
+
+# Only build these branches
+branches:
+  only:
+    - beta
+    - production
+
+# Python Versions
+python:
+  - "3.7"
+  - "3.8"
+  - "3.9"
+
+# Install dependencies
+install:
+  - make ci
+
+# Run test
+script:
+  - make test
+
+# Don't send mail
+notifications:
+  email: false
